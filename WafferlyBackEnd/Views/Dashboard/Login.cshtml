@@ -1,0 +1,61 @@
+﻿@*
+    WafferlyApp Backend - Login page
+    Copyright (c) Vision Lab
+    Creator Mohamed Abdelwahab
+    m.wahab84@gmail.com
+*@
+@{
+    ViewData["Title"] = "Wafferly Dashboard Login";
+}
+    <div class="row">
+        <div class="col-sm-4">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Sign in to Wafferly</legend>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-4 control-label">User name</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-lg-4 control-label">Password</label>
+                        <div class="col-lg-8">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me.
+                                </label>
+                            </div>
+                            <div>
+                                <p>Forgot your password?
+                                <a href="./resetpassword">Click here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-8 col-lg-offset-4">
+                            <button type="reset" class="btn btn-default">Reset</button>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-4">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Sign in using social paltforms</legend>
+                    <div class="form-group">
+                        <div class="col-lg-8 col-lg-offset-4">
+                            <button type="button" class="btn btn-default btn-md-8">G+</button>
+                            <button type="button" class="btn btn-primary btn-lg-8">Facebook</button>
+                        </div>
+                    </div>
+                </fieldset>
+                </form>
+        </div>
+    </div>

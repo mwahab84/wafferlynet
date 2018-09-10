@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,16 +29,18 @@ namespace WafferlyBackEnd
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Dashboard/Error");
             }
 
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(name: "dashboard",
+                                template:"Dashboard/{controller}/{action=Index}/{id?}");
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Dashboard}/{action=Index}/{id?}");
             });
         }
     }

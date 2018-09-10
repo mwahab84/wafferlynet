@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using WafferlyBackEnd.Models;
 
 namespace WafferlyBackEnd.Controllers
 {
-    public class HomeController : Controller
+    public class DashboardController : Controller
     {
+        public IActionResult Login(){
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
